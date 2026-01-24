@@ -136,8 +136,8 @@
         <p>VMProtect（VMP）想必大家都很熟悉，但随着其版本不断迭代，高版本的 VMProtect 在脱壳与分析方面变得异常困难——这一点在许多安全论坛和逆向社区中已有大量讨论,也有很多大佬发布教程</p>
 <p><strong>VMP IAT处理</strong>：</p>
 <p>mov reg,iat</p>
-<p>call reg</p>
-<p>jmp reg</p>
+<p>call iat</p>
+<p>jmp iat</p>
 <p><strong>寻找OEP：</strong></p>
 <p>找OEP大家不都不陌生这是我们脱壳的关键一步</p>
 <p>这里说一下每个人找OEP的思路不同这里我们就用一个公开的方法来找”VMP“的OEP</p>
