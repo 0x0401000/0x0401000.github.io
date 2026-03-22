@@ -12,7 +12,7 @@
 
     <title>
         
-        
+        记一次 VMP 对 TitanHide 的检测分析 - undefined
         
     </title>
 
@@ -121,7 +121,7 @@
 
 <div class="post-container">
     <div class="post-title">
-        
+        记一次 VMP 对 TitanHide 的检测分析
     </div>
 
     <div class="post-meta">
@@ -133,9 +133,7 @@
 </span>
     </div>
     <div class="post-content ">
-        <pre><code>title:记一次 VMP 对 TitanHide 的检测分析
-</code></pre>
-<p>VMProtect（简称 VMP）想必大家都很熟悉。随着其版本的不断迭代，高版本 VMP 的分析难度日益增加。</p>
+        <p>VMProtect（简称 VMP）想必大家都很熟悉。随着其版本的不断迭代，高版本 VMP 的分析难度日益增加。</p>
 <p>我的好朋友 R-R 之前曾推出过”VMP Anti-Debug”系列教程，其中详细讲述了基于 <strong>TitanHide</strong> 的反反调试驱动方案。了解 TitanHide 的朋友应该都知道，它是一款基于 Ring 0 层、通过 HOOK SSDT 方式实现的开源反反调试驱动。</p>
 <p>那么，VMP 究竟是依据什么来检测 TitanHide 的呢？又是如何完成这一检测过程的？在深入分析之前，我们先简单回顾一下 TitanHide 的基本原理。</p>
 <h3 id="1-检测原理：设备符号检测"><a href="#1-检测原理：设备符号检测" class="headerlink" title="1. 检测原理：设备符号检测"></a>1. 检测原理：设备符号检测</h3><p>许多用户可能已经用过或了解过 TitanHide。在分析过程中我发现，VMP 主要是通过对 TitanHide 的驱动设备符号（Device Symbol）进行检测来实现识别的。</p>
@@ -165,7 +163,7 @@
 <p>如果 <code>eax</code> 非负（即成功打开设备），则判定检测到 TitanHide，并执行相应的反调试逻辑。</p>
 <h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>值得一提的是，目前 TitanHide 的作者已经更新了版本，修复了此类检测问题，用户无需再手动修改驱动即可规避该检测。</p>
 <blockquote>
-<p><strong>声明</strong>：本文仅供安全研究人员学习与参考，聚焦于技术原理探讨。文中未包含任何恶意代码或可直接利用的攻击载荷，严禁用于非法目的。</p>
+<p><strong>声明</strong>：本文仅供安全研究人员学习与参考，聚焦于技术原理探讨。文中未包含任何恶意代码或可直接利用的攻击载荷，严禁用于非法目的。****</p>
 </blockquote>
 
         
