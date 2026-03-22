@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_28hi1hpxx24.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+
+    
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        <div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/avatar.png" />
+        </div>
+        <div class="name">
+            <i>喜欢研究二进制的小白</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <!-- HOME -->
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+
+            <!-- ABOUT -->
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+
+            <!-- SEARCH -->
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%A3%80%E6%B5%8B%E5%8E%9F%E7%90%86%EF%BC%9A%E8%AE%BE%E5%A4%87%E7%AC%A6%E5%8F%B7%E6%A3%80%E6%B5%8B"><span class="toc-text">1. 检测原理：设备符号检测</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%8A%A8%E6%80%81%E6%9E%84%E9%80%A0"><span class="toc-text">2. 逆向分析：字符串的动态构造</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-%E6%A0%88%E4%B8%8A%E5%8A%A8%E6%80%81%E6%9E%84%E9%80%A0%E5%AD%97%E7%AC%A6"><span class="toc-text">2.1 栈上动态构造字符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-%E6%9E%84%E9%80%A0-UNICODE-STRING-%E7%BB%93%E6%9E%84%E4%BD%93"><span class="toc-text">2.2 构造 UNICODE_STRING 结构体</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-%E5%A1%AB%E5%85%85-UNICODE-STRING-%E7%BB%93%E6%9E%84%E4%BD%93"><span class="toc-text">2.3 填充 UNICODE_STRING 结构体</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-%E6%9E%84%E9%80%A0-OBJECT-ATTRIBUTES-%E7%BB%93%E6%9E%84%E4%BD%93"><span class="toc-text">2.4 构造 OBJECT_ATTRIBUTES 结构体</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%A0%B8%E5%BF%83%E8%B0%83%E7%94%A8%E4%B8%8E%E5%88%A4%E6%96%AD"><span class="toc-text">3. 核心调用与判断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-text">结语</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-bg" id="search-bg"></div>
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2026-03-23 07:12:51</span></span>
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <p>​          title: 记一次 VMP 对 TitanHide 的检测分析</p>
+<p>VMProtect（简称 VMP）想必大家都很熟悉。随着其版本的不断迭代，高版本 VMP 的分析难度日益增加。</p>
+<p>我的好朋友 R-R 之前曾推出过”VMP Anti-Debug”系列教程，其中详细讲述了基于 <strong>TitanHide</strong> 的反反调试驱动方案。了解 TitanHide 的朋友应该都知道，它是一款基于 Ring 0 层、通过 HOOK SSDT 方式实现的开源反反调试驱动。</p>
+<p>那么，VMP 究竟是依据什么来检测 TitanHide 的呢？又是如何完成这一检测过程的？在深入分析之前，我们先简单回顾一下 TitanHide 的基本原理。</p>
+<h3 id="1-检测原理：设备符号检测"><a href="#1-检测原理：设备符号检测" class="headerlink" title="1. 检测原理：设备符号检测"></a>1. 检测原理：设备符号检测</h3><p>许多用户可能已经用过或了解过 TitanHide。在分析过程中我发现，VMP 主要是通过对 TitanHide 的驱动设备符号（Device Symbol）进行检测来实现识别的。</p>
+<p>核心代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HANDLE hDevice = <span class="built_in">CreateFileA</span>(<span class="string">&quot;\\\\.\\TitanHide&quot;</span>, GENERIC_READ | GENERIC_WRITE, <span class="number">0</span>, <span class="number">0</span>, OPEN_EXISTING, <span class="number">0</span>, <span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+
+<p>起初我在分析 VMP 时，误以为它检测了其他特征，甚至尝试重新编写了一个驱动来规避，但最终确认其检测点正是上述的设备名称。</p>
+<h3 id="2-逆向分析：字符串的动态构造"><a href="#2-逆向分析：字符串的动态构造" class="headerlink" title="2. 逆向分析：字符串的动态构造"></a>2. 逆向分析：字符串的动态构造</h3><p>为了规避静态字符串扫描，VMP 采用了在栈上动态构造字符的方式。以下是具体的汇编逻辑：</p>
+<h4 id="2-1-栈上动态构造字符"><a href="#2-1-栈上动态构造字符" class="headerlink" title="2.1 栈上动态构造字符"></a>2.1 栈上动态构造字符</h4><p>VMP 逐字节将字符串 <code>\\?\TitanHide</code> 写入栈内存：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">mov ecx, 5C</span><br><span class="line">mov word ptr ss:[ebp-1D0], cx      </span><br><span class="line">mov edx, 3F</span><br><span class="line">mov word ptr ss:[ebp-1CE], dx      </span><br><span class="line">mov eax, edx</span><br><span class="line">mov word ptr ss:[ebp-1CC], ax      </span><br><span class="line">mov word ptr ss:[ebp-1CA], cx     </span><br><span class="line">mov edx, 54</span><br><span class="line">mov word ptr ss:[ebp-1C8], dx    </span><br><span class="line">mov eax, 69</span><br><span class="line">mov word ptr ss:[ebp-1C6], ax      </span><br><span class="line">mov ecx, 74</span><br><span class="line">mov word ptr ss:[ebp-1C4], cx     </span><br><span class="line">mov edx, 61</span><br><span class="line">mov word ptr ss:[ebp-1C2], dx     </span><br><span class="line">mov eax, 6E</span><br><span class="line">mov word ptr ss:[ebp-1C0], ax    </span><br><span class="line">mov ecx, 48</span><br><span class="line">mov word ptr ss:[ebp-1BE], cx     </span><br><span class="line">mov edx, 69</span><br><span class="line">mov word ptr ss:[ebp-1BC], dx      </span><br><span class="line">mov eax, 64</span><br><span class="line">mov word ptr ss:[ebp-1BA], ax      </span><br><span class="line">mov ecx, 65</span><br><span class="line">mov word ptr ss:[ebp-1B8], cx      </span><br><span class="line">xor edx, edx</span><br><span class="line">mov word ptr ss:[ebp-1B6], dx    </span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2-构造-UNICODE-STRING-结构体"><a href="#2-2-构造-UNICODE-STRING-结构体" class="headerlink" title="2.2 构造 UNICODE_STRING 结构体"></a>2.2 构造 UNICODE_STRING 结构体</h4><p>随后，代码计算字符串长度并构建 <code>UNICODE_STRING</code> 结构：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">lea eax, dword ptr ss:[ebp-1D0]   </span><br><span class="line">lea ecx, dword ptr ds:[eax+2]     </span><br><span class="line">mov dx, word ptr ds:[eax]          </span><br><span class="line">add eax, 2                          </span><br><span class="line">cmp dx, bx                         </span><br><span class="line">jne 3.vmp                   </span><br><span class="line"></span><br><span class="line">sub eax, ecx                       </span><br><span class="line">sar eax, 1                          </span><br><span class="line">add eax, eax                        </span><br></pre></td></tr></table></figure>
+
+<h4 id="2-3-填充-UNICODE-STRING-结构体"><a href="#2-3-填充-UNICODE-STRING-结构体" class="headerlink" title="2.3 填充 UNICODE_STRING 结构体"></a>2.3 填充 UNICODE_STRING 结构体</h4><p>接着完成结构体的具体字段填充：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mov word ptr ss:[ebp-16C], ax     </span><br><span class="line">mov ecx, dword ptr ss:[ebp-16C]</span><br><span class="line">add ecx, 2                        </span><br><span class="line">mov word ptr ss:[ebp-16A], cx      </span><br><span class="line">lea edx, dword ptr ss:[ebp-1D0]</span><br><span class="line">mov dword ptr ss:[ebp-168], edx</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-4-构造-OBJECT-ATTRIBUTES-结构体"><a href="#2-4-构造-OBJECT-ATTRIBUTES-结构体" class="headerlink" title="2.4 构造 OBJECT_ATTRIBUTES 结构体"></a>2.4 构造 OBJECT_ATTRIBUTES 结构体</h4><p>最后，构建用于文件操作的 <code>OBJECT_ATTRIBUTES</code> 结构：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mov dword ptr ss:[ebp-320], 18    </span><br><span class="line">mov dword ptr ss:[ebp-31C], ebx    </span><br><span class="line">mov dword ptr ss:[ebp-314], ebx   </span><br><span class="line">lea eax, dword ptr ss:[ebp-16C]</span><br><span class="line">mov dword ptr ss:[ebp-318], eax    </span><br><span class="line">mov dword ptr ss:[ebp-310], ebx   </span><br><span class="line">mov dword ptr ss:[ebp-30C], ebx    </span><br></pre></td></tr></table></figure>
+
+<h3 id="3-核心调用与判断"><a href="#3-核心调用与判断" class="headerlink" title="3. 核心调用与判断"></a>3. 核心调用与判断</h3><p>跳过繁琐的结构初始化细节，直接关注最关键的部分：VMP 直接使用 <code>syscall</code> 指令调用 <code>NtOpenFile</code> API。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">push 60                          </span><br><span class="line">lea ecx, dword ptr ss:[ebp-364]</span><br><span class="line">push ecx                          </span><br><span class="line">lea edx, dword ptr ss:[ebp-320]</span><br><span class="line">push edx                         </span><br><span class="line">push C0100080                    </span><br><span class="line">lea eax, dword ptr ss:[ebp-140]</span><br><span class="line">push eax                           </span><br><span class="line">mov ecx, dword ptr ss:[ebp-30]    </span><br><span class="line">or ecx, 0                          </span><br><span class="line">syscall                         </span><br></pre></td></tr></table></figure>
+
+<p>调用结束后，通过返回值判断是否成功打开了设备句柄，从而确定是否存在 TitanHide：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">test eax, eax                 </span><br><span class="line">jl 3.exe</span><br><span class="line">mov dword ptr ss:[ebp-2E8], 2</span><br></pre></td></tr></table></figure>
+
+<p>如果 <code>eax</code> 非负（即成功打开设备），则判定检测到 TitanHide，并执行相应的反调试逻辑。</p>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>值得一提的是，目前 TitanHide 的作者已经更新了版本，修复了此类检测问题，用户无需再手动修改驱动即可规避该检测。</p>
+<blockquote>
+<p><strong>声明</strong>：本文仅供安全研究人员学习与参考，聚焦于技术原理探讨。文中未包含任何恶意代码或可直接利用的攻击载荷，严禁用于非法目的。</p>
+</blockquote>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+        <div id="lv-container"></div>
+        <div class="giscus"></div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>  Theme <a target="_blank" rel="noopener" href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = ""
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+</html>
